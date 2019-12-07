@@ -13,6 +13,7 @@
     <string name="Full_Name">Full Name</string>
     <string name="User_Name">Username</string>
     <string name="Email">E-mail</string>
+    <string name="Email2">Email</string>
     <string name="Password">Password</string>
     <string name="Confirm_password">Confirm password</string>
     <string name="Create_New_Account">Create New Account</string>
@@ -51,6 +52,10 @@
     <string name="Candy">Candy</string>
     <string name="Meals">Meals</string>
     <string name="About_us_text">Hot Meal \n It is an application that provides services  for restaurants where it provides food,  drink and delivery services etc.</string>
+    <string name="date_created">Date created</string>
+    <string name="Mobile_Number">Mobile Number</string>
+    <string name="data_call_us" >:   %1$s</string>
+    <string name="Social_Networks">Social Networks</string>
 
 
 </resources>
