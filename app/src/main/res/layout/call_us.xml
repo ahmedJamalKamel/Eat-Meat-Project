@@ -16,7 +16,7 @@
     android:textStyle="bold"
     android:textColor="@android:color/white"
     android:paddingBottom="18dp"
-    android:layout_height="100dp"/>
+    android:layout_height="75dp"/>
 
     <ImageView
         android:id="@+id/back"

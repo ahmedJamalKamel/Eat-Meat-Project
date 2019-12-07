@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tittle"
+        android:background="@color/colorAppEat"
+        android:layout_width="match_parent"
+        android:text="@string/Delivery_Address"
+        android:gravity="center_horizontal|bottom"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:paddingBottom="18dp"
+        android:layout_height="75dp"/>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/tittle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/back" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/tittle"
+        android:layout_marginTop="20dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="4dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El baz bulding"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:drawableEnd="@drawable/arrow_right"
+                android:layout_marginEnd="16dp"
+                />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Palestine,Gaza,Alnaser"
+                android:layout_below="@id/txt1"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp"
+                />
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="moh.baz@gmail.com"
+                android:layout_below="@id/address"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp"
+                />
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00970 592 728 874"
+                android:layout_below="@id/email"
+            android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/card1"
+        android:layout_marginTop="35dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="4dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El baz bulding"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:drawableEnd="@drawable/arrow_right"
+                android:layout_marginEnd="16dp"
+                />
+
+
+            <TextView
+                android:id="@+id/address2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Palestine,Gaza,Alnaser"
+                android:layout_below="@id/txt2"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp"
+                />
+            <TextView
+                android:id="@+id/email2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="moh.baz@gmail.com"
+                android:layout_below="@id/address2"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp"
+                />
+            <TextView
+                android:id="@+id/number2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00970 592 728 874"
+                android:layout_below="@id/email2"
+            android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:text="Add New Address"
+        android:background="@android:color/white"
+        android:layout_below="@id/card2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/ending"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
