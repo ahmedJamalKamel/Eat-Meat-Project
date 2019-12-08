@@ -10,19 +10,19 @@ public class PhotoAndTextNotidication {
         this.imageResoursId = imageResoursId;
     }
 
-    public String getPotoTitle() {
+    private String getPotoTitle() {
         return potoTitle;
     }
 
-    public void setPotoTitle(String potoTitle) {
+    private void setPotoTitle(String potoTitle) {
         this.potoTitle = potoTitle;
     }
 
-    public int getImageResoursId() {
+    private int getImageResoursId() {
         return imageResoursId;
     }
 
-    public void setImageResoursId(int imageResoursId) {
+    private void setImageResoursId(int imageResoursId) {
         this.imageResoursId = imageResoursId;
     }
 }

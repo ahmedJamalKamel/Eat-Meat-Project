@@ -19,7 +19,7 @@
 
         <TextView
             android:id="@+id/text_notification_header"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/New_notice"
@@ -31,9 +31,9 @@
             android:id="@+id/text_notification_body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:gravity="center"
+            android:layout_gravity="start"
+            android:layout_margin="5dp"
+            android:gravity="start"
             android:text="@string/body_notification"
             android:textColor="#000000" />
     </LinearLayout>
