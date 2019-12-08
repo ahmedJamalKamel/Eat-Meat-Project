@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity android:name=".RegisterOrLoginHere"></activity>
+        <activity android:name=".LogInActivity"></activity>
+        <activity android:name=".SingUpActivity"></activity>
+        <activity android:name=".forgetPass"></activity>
+        <activity android:name=".Home"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +25,7 @@
         <activity android:name=".Introdaction">
 
         </activity>
+
 
     </application>
 

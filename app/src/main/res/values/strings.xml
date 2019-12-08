@@ -51,6 +51,7 @@
     <string name="Candy">Candy</string>
     <string name="Meals">Meals</string>
     <string name="About_us_text">Hot Meal \n It is an application that provides services  for restaurants where it provides food,  drink and delivery services etc.</string>
+    <string name="DonthaveAcont">Dont have an account?</string>
 
 
 </resources>

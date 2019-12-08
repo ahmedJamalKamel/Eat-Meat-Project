@@ -54,6 +54,7 @@
         app:layout_constraintGuide_percent=".87" />
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="CreateAccount"
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

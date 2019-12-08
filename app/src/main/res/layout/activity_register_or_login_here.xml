@@ -82,6 +82,7 @@
         app:layout_constraintGuide_percent=".85" />
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="logIn"
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -97,6 +98,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="singUp"
         android:id="@+id/button3"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
