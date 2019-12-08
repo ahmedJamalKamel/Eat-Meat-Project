@@ -230,8 +230,7 @@
     </androidx.cardview.widget.CardView>
 
 
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -239,7 +238,7 @@
         android:layout_marginTop="35dp"
         android:text="@string/Add"
         android:layout_marginBottom="12dp"
-        android:background="@color/colorAppEat"
+        android:backgroundTint="@color/colorAppEat"
         android:theme="@style/AppTheme"
         android:layout_alignParentBottom="true"/>
 

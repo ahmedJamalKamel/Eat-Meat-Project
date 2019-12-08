@@ -160,14 +160,15 @@
     </androidx.cardview.widget.CardView>
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="35dp"
         android:text="Add New Address"
-        android:background="@android:color/white"
+        android:textColor="@color/grean"
         android:layout_below="@id/card2"/>
 
     <Button
@@ -178,7 +179,7 @@
         android:layout_marginTop="35dp"
         android:text="@string/ending"
         android:layout_marginBottom="12dp"
-        android:background="@android:color/white"
+        android:backgroundTint="@color/colorAppEat"
         android:layout_alignParentBottom="true"/>
 
 
