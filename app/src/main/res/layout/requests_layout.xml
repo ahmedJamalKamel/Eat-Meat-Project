@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:expandedTitleGravity="center"
-            app:title="@string/About_us">
+            app:title="@string/Requests">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -26,22 +26,5 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/about_us" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/about_shape"
-        android:gravity="center"
-        android:text="@string/About_us_text"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 
 </LinearLayout>
