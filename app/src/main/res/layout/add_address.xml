@@ -239,7 +239,8 @@
         android:layout_marginTop="35dp"
         android:text="@string/Add"
         android:layout_marginBottom="12dp"
-        android:background="@android:color/white"
+        android:background="@color/colorAppEat"
+        android:theme="@style/AppTheme"
         android:layout_alignParentBottom="true"/>
 
 
