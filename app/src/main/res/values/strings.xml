@@ -53,7 +53,7 @@
     <string name="About_us_text">Hot Meal \n It is an application that provides services  for restaurants where it provides food,  drink and delivery services etc.</string>
     <string name="date_created">Date created</string>
     <string name="Mobile_Number">Mobile Number</string>
-    <string name="data_call_us" >:   %1$s</string>
+    <string name="data_call_us">:   %1$s</string>
     <string name="Social_Networks">Social Networks</string>
     <string name="Email2">Email</string>
     <string name="Add_address">Add Address</string>
@@ -62,7 +62,7 @@
     <string name="first_address">First Address</string>
     <string name="second_address">Second Address</string>
     <string name="City">City</string>
-    <string name="Neighborhood" >Neighborhood</string>
+    <string name="Neighborhood">Neighborhood</string>
     <string name="Add">add</string>
     <string name="ending">Ending</string>
     <string name="Delivery_Address">Delivery Address</string>
@@ -78,6 +78,7 @@
     <string name="Important_Restaurants">Important Restaurants</string>
     <string name="Palmera">Palmera</string>
     <string name="rating">Rating</string>
+    <string name="google_maps_key" >AIzaSyB2OzADUq6nVDK4JmBeQg8Xgm6Vkxx6Bfs</string>
 
 
 </resources>
