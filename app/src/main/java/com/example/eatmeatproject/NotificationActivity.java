@@ -21,7 +21,6 @@ public class NotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notifaction_layout);
-
         List<PhotoAndTextNotidication> images = new ArrayList<>();
         images.add(new PhotoAndTextNotidication("Photo 1", R.drawable.image_notification));
         images.add(new PhotoAndTextNotidication("Photo 2", R.drawable.image_notification));
