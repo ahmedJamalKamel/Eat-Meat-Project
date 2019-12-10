@@ -1,47 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Home">
+    android:layout_height="match_parent">
 
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tittle"
         android:background="@color/colorAppEat"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:expandedTitleGravity="center"
-            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
-            app:title="Welcome">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                app:layout_collapseMode="pin" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nsested_scrol"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:text="@string/Home"
+        android:gravity="center_horizontal|top"
+        android:paddingTop="25dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:paddingBottom="18dp"
+        android:layout_height="105dp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FF0"
-            android:text="gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
-            android:textSize="30sp" />
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tittle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/menu_hamburger" />
 
-    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/se"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tittle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        app:searchIcon="@drawable/search" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favorite_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_below="@id/tittle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/favorite_item"
+        />
+
+
+</RelativeLayout>

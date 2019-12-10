@@ -13,13 +13,17 @@
         <activity android:name=".RegisterOrLoginHere"></activity>
         <activity android:name=".LogInActivity"></activity>
         <activity android:name=".SingUpActivity"></activity>
+        <activity android:name=".Favorites">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".forgetPass"></activity>
         <activity android:name=".Home">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity android:name=".NotificationActivity">
 
