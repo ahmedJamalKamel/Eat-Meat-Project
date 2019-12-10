@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -13,23 +13,161 @@
         android:background="@color/colorAppEat"
         android:layout_width="match_parent"
         android:text="@string/Home"
-        android:gravity="center_horizontal|bottom"
+        android:gravity="center_horizontal|top"
+        android:paddingTop="25dp"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:paddingBottom="18dp"
-        android:layout_height="75dp"/>
+        android:layout_height="105dp"/>
 
     <ImageView
         android:id="@+id/back"
         android:layout_width="38dp"
         android:layout_height="35dp"
-        android:layout_alignBottom="@+id/tittle"
+        android:layout_alignTop="@+id/tittle"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
         android:src="@drawable/menu_hamburger" />
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/se"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tittle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        app:searchIcon="@drawable/search" />
 
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pager_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tittle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-25dp"
+        app:cardCornerRadius="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <com.example.eatmeatproject.AutoScrollViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@+id/view_pager"
+                android:layout_marginBottom="20dp"
+                android:background="#00000000"
+                app:tabBackground="@drawable/viewpager_tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pager_card"
+
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:paddingStart="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="2"
+        tools:listitem="@layout/category_item"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/category_recycler"
+        android:layout_marginStart="20dp"
+        android:text="@string/Important_Dishes"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/category_recycler"
+        android:layout_marginEnd="20dp"
+        android:text="@string/See_All"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:id="@+id/dishes_recycler"
+        android:layout_below="@id/see_all"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        tools:listitem="@layout/important_dishes_item"
+        android:orientation="horizontal"
+        tools:itemCount="1"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dishes_recycler"
+        android:layout_marginStart="20dp"
+        android:text="@string/Important_Restaurants"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/see_all2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dishes_recycler"
+        android:layout_marginEnd="20dp"
+        android:text="@string/See_All"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:id="@+id/restaurant_recycler"
+        android:layout_below="@id/see_all2"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        tools:listitem="@layout/important_restaurant_item"
+        android:orientation="horizontal"
+        />
+</RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

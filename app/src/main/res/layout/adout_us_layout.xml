@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/about_us" />
+        app:srcCompat="@drawable/about_us" />
 
     <TextView
         android:layout_width="match_parent"

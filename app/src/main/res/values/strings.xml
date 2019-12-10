@@ -67,6 +67,16 @@
     <string name="ending">Ending</string>
     <string name="Delivery_Address">Delivery Address</string>
     <string name="DonthaveAcont">Dont have an account?</string>
+    <string name="New_notice">New notice</string>
+    <string name="body_notification">Notification</string>
+    <string name="thailandi_resturant">THAILANDI RESTURANT</string>
+    <string name="Important_Dishes">Important Dishes</string>
+    <string name="See_All">See All</string>
+    <string name="meal_time">Meal time</string>
+    <string name="_20_min">20 min</string>
+    <string name="grills">Grills</string>
+    <string name="Important_Restaurants">Important Restaurants</string>
+    <string name="Palmera">Palmera</string>
 
 
 </resources>

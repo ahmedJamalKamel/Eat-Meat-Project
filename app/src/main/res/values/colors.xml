@@ -7,4 +7,6 @@
     <color name="colorNavigationButton">#F5F5F5</color>
     <color name="unclecNavication">#707070</color>
     <color name="grean">#147A08</color>
+    <color name="colorAccent2">#0D9D7E</color>
+    <color name="color_gray">#F5F5F5</color>
 </resources>
