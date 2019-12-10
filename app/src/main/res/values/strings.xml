@@ -69,7 +69,7 @@
     <string name="DonthaveAcont">Dont have an account?</string>
     <string name="New_notice">New notice</string>
     <string name="body_notification">Notification</string>
-    <string name="thailandi_resturant">THAILANDI RESTURANT</string>
+    <string name="thailandi_resturant">THAILANDI</string>
     <string name="Important_Dishes">Important Dishes</string>
     <string name="See_All">See All</string>
     <string name="meal_time">Meal time</string>
@@ -79,6 +79,7 @@
     <string name="Palmera">Palmera</string>
     <string name="rating">Rating</string>
     <string name="google_maps_key" >AIzaSyB2OzADUq6nVDK4JmBeQg8Xgm6Vkxx6Bfs</string>
+    <string name="Restaurants_in_the_range">Restaurants in the range</string>
 
 
 </resources>
