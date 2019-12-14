@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#F3F3F3</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorAppEat">#FD5739</color>
     <color name="colorNavigationButton">#F5F5F5</color>
     <color name="unclecNavication">#707070</color>
     <color name="grean">#147A08</color>
+    <color name="colorAccent2">#0D9D7E</color>
+    <color name="color_gray">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#464646</color>
 </resources>

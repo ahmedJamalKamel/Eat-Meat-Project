@@ -13,6 +13,8 @@
     <string name="Full_Name">Full Name</string>
     <string name="User_Name">Username</string>
     <string name="Email">E-mail</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="Password">Password</string>
     <string name="Confirm_password">Confirm password</string>
     <string name="Create_New_Account">Create New Account</string>
@@ -51,11 +53,11 @@
     <string name="Candy">Candy</string>
     <string name="Meals">Meals</string>
     <string name="About_us_text">Hot Meal \n It is an application that provides services  for restaurants where it provides food,  drink and delivery services etc.</string>
+    <string name="date_created">Date created</string>
     <string name="Mobile_Number">Mobile Number</string>
     <string name="data_call_us">:   %1$s</string>
     <string name="Social_Networks">Social Networks</string>
-    <string name="Delivery_Address">Delivery Address</string>
-    <string name="ending">ending</string>
+    <string name="Email2">Email</string>
     <string name="Add_address">Add Address</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
@@ -64,10 +66,24 @@
     <string name="City">City</string>
     <string name="Neighborhood">Neighborhood</string>
     <string name="Add">add</string>
-    <string name="date_created">Date Created</string>
-    <string name="Email2">Email</string>
-    <string name="New_notice">New notice</string>
-    <string name="body_notification">Lorem Ipsum is simply dummy text. Lorem Ipsum has been the industry\'s  standard dummy text ever since the 1500s</string>
+    <string name="ending">Ending</string>
+    <string name="Delivery_Address">Delivery Address</string>
     <string name="DonthaveAcont">Dont have an account?</string>
+    <string name="New_notice">New notice</string>
+    <string name="body_notification">Notification</string>
+    <string name="thailandi_resturant">THAILANDI</string>
+    <string name="Important_Dishes">Important Dishes</string>
+    <string name="See_All">See All</string>
+    <string name="meal_time">Meal time</string>
+    <string name="_20_min">20 min</string>
+    <string name="grills">Grills</string>
+    <string name="Important_Restaurants">Important Restaurants</string>
+    <string name="Palmera">Palmera</string>
+    <string name="rating">Rating</string>
+    <string name="google_maps_key">AIzaSyB2OzADUq6nVDK4JmBeQg8Xgm6Vkxx6Bfs</string>
+    <string name="Restaurants_in_the_range">Restaurants in the range</string>
+    <string name="personEmail">m-albaz@hotmail.com</string>
+    <string name="address">address</string>
+
 
 </resources>

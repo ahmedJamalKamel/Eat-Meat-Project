@@ -27,13 +27,13 @@
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="18dp"
         android:layout_marginStart="12dp"
-        android:src="@drawable/back" />
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/photo"
+        app:srcCompat="@drawable/photo"
         android:scaleType="fitXY"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -156,22 +156,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/facebook"/>
+                app:srcCompat="@drawable/facebook" />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/google"/>
+                app:srcCompat="@drawable/google" />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/twitter"/>
+                app:srcCompat="@drawable/twitter" />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/linked"/>
+                app:srcCompat="@drawable/linked" />
 
 
 

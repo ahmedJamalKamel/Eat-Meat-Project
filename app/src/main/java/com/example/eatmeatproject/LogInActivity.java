@@ -21,7 +21,7 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void singintohome(View view) {
-        Intent intent = new Intent(LogInActivity.this, Home.class);
+        Intent intent = new Intent(LogInActivity.this, MainActivity.class);
         startActivity(intent);
     }
 }

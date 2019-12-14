@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/bg_shap"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/restaurant_image"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/palmera" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/restaurant_image"
+        android:text="@string/Palmera"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurant_name"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_toStartOf="@+id/rate"
+        android:layout_toEndOf="@+id/restaurant_image"
+        android:maxLength="50"
+        android:text="@string/ConLoginOrRegister3"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/rating" />
+</RelativeLayout>
