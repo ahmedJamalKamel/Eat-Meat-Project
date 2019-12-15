@@ -1,5 +1,6 @@
 package com.example.eatmeatproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ViewPager viewPager;
     TextView textView;
     ImageView imageView_location;
+    DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,32 +42,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_Home:
-                        textView.setText(R.string.Home);
                         viewPager.setCurrentItem(0);
                         break;
                     case R.id.action_navigation:
-                        textView.setText(R.string.Notifications);
                         viewPager.setCurrentItem(1);
                         break;
                     case R.id.action_Favorite:
-                        textView.setText(R.string.Favorite);
                         viewPager.setCurrentItem(2);
                         break;
                     case R.id.action_profile:
-                        textView.setText(R.string.profile);
                         viewPager.setCurrentItem(3);
                         break;
                     default:
@@ -119,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -129,7 +125,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+        switch (item.getItemId()) {
+            case R.id.menu:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.requests:
+                startActivity(new Intent(MainActivity.this, RequestsActivity.class));
+                break;
+            case R.id.restaurant:
+                startActivity(new Intent(MainActivity.this, ResturantActivity.class));
+                break;
+            case R.id.about_us:
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+                break;
+            case R.id.call_us:
+                startActivity(new Intent(MainActivity.this, CallUsActivity.class));
+                break;
+            case R.id.setting:
+                break;
+            case R.id.exit:
+
+                break;
+        }
+
+        return true;
     }
 
     public class ViewPagerAdapter extends FragmentPagerAdapter {

@@ -58,7 +58,7 @@
         android:text="@string/forgetaccont" />
 
     <com.google.android.material.button.MaterialButton
-        android:onClick="singintohome"
+        android:id="@+id/logintohome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

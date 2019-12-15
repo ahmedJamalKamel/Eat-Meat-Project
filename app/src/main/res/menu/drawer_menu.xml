@@ -6,19 +6,19 @@
             android:icon="@drawable/ic_home"
             android:title="@string/Main" />
         <item
-            android:id="@+id/cart"
+            android:id="@+id/requests"
             android:icon="@drawable/rfp"
             android:title="@string/Requests" />
         <item
-            android:id="@+id/order"
+            android:id="@+id/restaurant"
             android:icon="@drawable/restaurant"
             android:title="@string/Restaurants" />
         <item
-            android:id="@+id/favorit"
+            android:id="@+id/about_us"
             android:icon="@drawable/ic_info"
             android:title="@string/About_us" />
         <item
-            android:id="@+id/call"
+            android:id="@+id/call_us"
             android:icon="@drawable/call"
             android:title="@string/Call_us" />
         <item

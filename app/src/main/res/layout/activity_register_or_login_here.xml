@@ -82,8 +82,7 @@
         app:layout_constraintGuide_percent=".85" />
 
     <com.google.android.material.button.MaterialButton
-        android:onClick="logIn"
-        android:id="@+id/button2"
+        android:id="@+id/gotologin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -92,14 +91,13 @@
         android:layout_marginRight="16dp"
         android:text="@string/Login"
         app:backgroundTint="@color/colorAppEat"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/gotosinup"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <com.google.android.material.button.MaterialButton
-        android:onClick="singUp"
-        android:id="@+id/button3"
+        android:id="@+id/gotosinup"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -110,6 +108,6 @@
         android:text="@string/Sing_UP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/gotologin"
+        app:layout_constraintTop_toTopOf="@+id/gotologin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
