@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         viewPager = findViewById(R.id.view_pager1);
         textView = findViewById(R.id.title_main_page);
-        imageView_location = findViewById(R.id.location_image);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
 
