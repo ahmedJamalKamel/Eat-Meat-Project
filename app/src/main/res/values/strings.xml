@@ -84,6 +84,7 @@
     <string name="Restaurants_in_the_range">Restaurants in the range</string>
     <string name="personEmail">m-albaz@hotmail.com</string>
     <string name="address">address</string>
+    <string name="Location">Location</string>
 
 
 </resources>

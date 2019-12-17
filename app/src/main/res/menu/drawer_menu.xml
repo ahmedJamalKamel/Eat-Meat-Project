@@ -13,6 +13,7 @@
             android:id="@+id/restaurant"
             android:icon="@drawable/restaurant"
             android:title="@string/Restaurants" />
+
         <item
             android:id="@+id/about_us"
             android:icon="@drawable/ic_info"
