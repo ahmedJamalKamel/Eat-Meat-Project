@@ -52,3 +52,4 @@ dependencies {
     implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
 
 }
+apply plugin: 'com.google.gms.google-services'

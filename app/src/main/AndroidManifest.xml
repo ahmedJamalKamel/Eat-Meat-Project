@@ -14,13 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestsActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".FireBaseUi">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity android:name=".RequestsActivity" />
         <activity android:name=".CallUsActivity" />
         <activity android:name=".AboutUs" />
         <activity android:name=".homeFragment" />
@@ -32,11 +29,14 @@
         <activity android:name=".RegisterOrLoginHere" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".CreateAcontActivity" />
-
         <activity android:name=".SingUpActivity" />
         <activity android:name=".forgetPass" />
         <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Introdaction" />
 

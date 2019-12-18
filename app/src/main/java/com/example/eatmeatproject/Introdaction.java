@@ -35,7 +35,7 @@ public class Introdaction extends AppCompatActivity {
                     LoginRegesterImag.setImageResource(R.drawable.loginandregesterscond);
                     page = 2;
                 } else if (page == 2) {
-                    Intent intent = new Intent(Introdaction.this, RegisterOrLoginHere.class);
+                    Intent intent = new Intent(Introdaction.this, MainActivity.class);
                     startActivity(intent);
                 }
             }
@@ -43,7 +43,7 @@ public class Introdaction extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Introdaction.this, RegisterOrLoginHere.class);
+                Intent intent = new Intent(Introdaction.this, MainActivity.class);
                 startActivity(intent);
             }
         });
