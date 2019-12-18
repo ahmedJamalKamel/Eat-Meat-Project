@@ -69,11 +69,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case R.id.action_navigation:
                         viewPager.setCurrentItem(1);
                         break;
-                    case R.id.action_Favorite:
+                    case R.id.location:
                         viewPager.setCurrentItem(2);
                         break;
-                    case R.id.action_profile:
+                    case R.id.action_Favorite:
                         viewPager.setCurrentItem(3);
+                        break;
+                    case R.id.action_profile:
+                        viewPager.setCurrentItem(4);
                         break;
                     default:
                         break;
@@ -100,10 +103,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         bottomNavigationView.setSelectedItemId(R.id.action_navigation);
                         break;
                     case 2:
+                        textView.setText(R.string.Location);
+                        bottomNavigationView.setSelectedItemId(R.id.location);
+                        break;
+                    case 3:
                         textView.setText(R.string.Favorite);
                         bottomNavigationView.setSelectedItemId(R.id.action_Favorite);
                         break;
-                    case 3:
+                    case 4:
                         textView.setText(R.string.profile);
                         bottomNavigationView.setSelectedItemId(R.id.action_profile);
                         break;
@@ -182,8 +189,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case 1:
                     return new notifacationFragment();
                 case 2:
-                    return new forvretFragment();
+                    return new MapActivity();
                 case 3:
+                    return new forvretFragment();
+                case 4:
                     return new profielFragment();
             }
             return null;
@@ -191,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 
