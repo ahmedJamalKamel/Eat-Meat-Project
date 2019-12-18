@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -23,4 +24,10 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/request_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/request_item"
+        android:layout_margin="12dp"/>
 </LinearLayout>

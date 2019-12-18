@@ -85,6 +85,8 @@
     <string name="personEmail">m-albaz@hotmail.com</string>
     <string name="address">address</string>
     <string name="Location">Location</string>
+    <string name="Burger_Meal">Burger Meal</string>
+    <string name="Details">Details</string>
 
 
 </resources>
