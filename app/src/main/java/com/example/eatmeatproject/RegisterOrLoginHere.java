@@ -15,8 +15,8 @@ public class RegisterOrLoginHere extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_or_login_here);
-        login = findViewById(R.id.gotologin);
-        sinup = findViewById(R.id.gotosinup);
+//        login = findViewById(R.id.gotologin);
+//        sinup = findViewById(R.id.gotosinup);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
