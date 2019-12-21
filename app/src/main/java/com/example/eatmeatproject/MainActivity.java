@@ -215,20 +215,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new AuthUI.IdpConfig.FacebookBuilder().build(),
                     new AuthUI.IdpConfig.AnonymousBuilder().build()
             );
-            AuthMethodPickerLayout customLayout = new AuthMethodPickerLayout
-                    .Builder(R.layout.activity_register_or_login_here)
-                    .setGoogleButtonId(R.id.google)
-                    .setEmailButtonId(R.id.Emil)
-                    .setFacebookButtonId(R.id.facebook)
-                    .setAnonymousButtonId(R.id.anonymouslogin)
-                    .build();
+//            AuthMethodPickerLayout customLayout = new AuthMethodPickerLayout
+//                    .Builder(R.layout.activity_register_or_login_here)
+//                    .setGoogleButtonId(R.id.google)
+//                    .setEmailButtonId(R.id.Emil)
+//                    .setFacebookButtonId(R.id.facebook)
+//                    .setAnonymousButtonId(R.id.anonymouslogin)
+//                    .build();
 
             startActivityForResult(
                     AuthUI.getInstance()
                             .createSignInIntentBuilder()
                             .setIsSmartLockEnabled(false)
                             .setLogo(R.drawable.loginandregesterther)
-                            .setAuthMethodPickerLayout(customLayout)
                             .setAvailableProviders(providers).build(),
                     RC_SIGN_IN
             );
