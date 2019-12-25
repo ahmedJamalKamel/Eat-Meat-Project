@@ -18,7 +18,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.firebase.ui.auth.AuthMethodPickerLayout;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -151,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, RequestsActivity.class));
                 break;
             case R.id.restaurant:
-                startActivity(new Intent(MainActivity.this, ResturantActivity.class));
+                startActivity(new Intent(MainActivity.this, RestaurantActivity.class));
                 break;
             case R.id.about_us:
                 startActivity(new Intent(MainActivity.this, AboutUs.class));
@@ -215,20 +214,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new AuthUI.IdpConfig.FacebookBuilder().build(),
                     new AuthUI.IdpConfig.AnonymousBuilder().build()
             );
-            AuthMethodPickerLayout customLayout = new AuthMethodPickerLayout
-                    .Builder(R.layout.activity_register_or_login_here)
-                    .setGoogleButtonId(R.id.google)
-                    .setEmailButtonId(R.id.Emil)
-                    .setFacebookButtonId(R.id.facebook)
-                    .setAnonymousButtonId(R.id.anonymouslogin)
-                    .build();
+//            AuthMethodPickerLayout customLayout = new AuthMethodPickerLayout
+//                    .Builder(R.layout.activity_register_or_login_here)
+//                    .setGoogleButtonId(R.id.google)
+//                    .setEmailButtonId(R.id.Emil)
+//                    .setFacebookButtonId(R.id.facebook)
+//                    .setAnonymousButtonId(R.id.anonymouslogin)
+//                    .build();
 
             startActivityForResult(
                     AuthUI.getInstance()
                             .createSignInIntentBuilder()
                             .setIsSmartLockEnabled(false)
                             .setLogo(R.drawable.loginandregesterther)
-                            .setAuthMethodPickerLayout(customLayout)
                             .setAvailableProviders(providers).build(),
                     RC_SIGN_IN
             );

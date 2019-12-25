@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResturantActivity">
+    tools:context=".MenuActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -31,21 +32,15 @@
                 android:layout_height="?actionBarSize"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/back" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nsested_scrol"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <!--app:layout_behavior=".ToolbarBhever"-->
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
+            android:background="@color/white"
             app:tabGravity="fill"
             app:tabSelectedTextColor="@color/colorAppEat"
             app:tabTextColor="#000">
@@ -54,7 +49,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Main_Dishes"
-
                 />
 
             <com.google.android.material.tabs.TabItem
@@ -77,9 +71,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Meals" />
         </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
-    </androidx.core.widget.NestedScrollView>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_for_resturant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

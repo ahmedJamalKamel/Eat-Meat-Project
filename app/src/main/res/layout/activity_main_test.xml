@@ -31,11 +31,6 @@
         android:layout_marginBottom="?actionBarSize"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
@@ -50,12 +45,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/menu_bottomnavigation" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/location" />
 
-    </RelativeLayout>
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
