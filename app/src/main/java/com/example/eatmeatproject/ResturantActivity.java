@@ -2,6 +2,7 @@ package com.example.eatmeatproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -24,6 +25,9 @@ public class ResturantActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resturant_layout);
+        System.out.println("v jjjjjj");
+
+        Log.v("ss","asxasx");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
@@ -79,6 +83,7 @@ public class ResturantActivity extends AppCompatActivity {
                 case 3:
                     return getString(R.string.Candy);
                 case 4:
+
                     return getString(R.string.Meals);
             }
             return null;

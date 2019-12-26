@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
@@ -14,24 +15,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TestDownlowedFromFierStore">
+
+        </activity>
         <activity android:name=".RequestsActivity" />
         <activity android:name=".CallUsActivity" />
         <activity android:name=".AboutUs" />
         <activity android:name=".homeFragment" />
-        <activity android:name=".ResturantActivity" >
-
-</activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".MapActivity" />
-        <activity android:name=".splash">
+        <activity android:name=".ResturantActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".splash"></activity>
         <activity android:name=".Introdaction" />
 
         <meta-data
