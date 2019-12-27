@@ -2,39 +2,32 @@ package com.example.eatmeatproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-public class ResturantActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.resturant_layout);
-        System.out.println("v jjjjjj");
-
-        Log.v("ss","asxasx");
+        setContentView(R.layout.menu_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ResturantActivity.this, MainActivity.class));
+                onBackPressed();
             }
         });
         TabLayout tabLayout=findViewById(R.id.tabs);
@@ -83,7 +76,6 @@ public class ResturantActivity extends AppCompatActivity {
                 case 3:
                     return getString(R.string.Candy);
                 case 4:
-
                     return getString(R.string.Meals);
             }
             return null;

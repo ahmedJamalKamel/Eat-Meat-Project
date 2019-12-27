@@ -14,17 +14,28 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 
 public class homeFragment extends Fragment {
     RecyclerView category_recycler, dishes_recycler, restaurant_recycler;
+    private FirebaseFirestore db=FirebaseFirestore.getInstance();
+    private CollectionReference collectionReference=db.collection("TImportantDishes");
+    private ImprtantDishesAdapter adapter;
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Nullable
@@ -36,6 +47,20 @@ public class homeFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+        Query query=collectionReference;
+        FirestoreRecyclerOptions<ImportantDishes> options=new FirestoreRecyclerOptions
+                .Builder<ImportantDishes>()
+                .setQuery(query,ImportantDishes.class)
+                .build();
+        adapter=new ImprtantDishesAdapter(options);
+        RecyclerView recyclerView=view.findViewById(R.id.dishes_recycler);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+        recyclerView.setAdapter(adapter);
+
+
+
         AutoScrollPagerAdapter autoScrollPagerAdapter =
                 new AutoScrollPagerAdapter(getFragmentManager());
         AutoScrollViewPager viewPager = view.findViewById(R.id.view_pager);
@@ -65,11 +90,11 @@ public class homeFragment extends Fragment {
         CategoryAdapter adapter = new CategoryAdapter(getContext(), categories);
         category_recycler.setAdapter(adapter);
 
-        dishes_recycler = view.findViewById(R.id.dishes_recycler);
-        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
-        dishes_recycler.setLayoutManager(linearLayoutManager2);
-        DishesAdapter adapter2 = new DishesAdapter();
-        dishes_recycler.setAdapter(adapter2);
+//        dishes_recycler = view.findViewById(R.id.dishes_recycler);
+//        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+//        dishes_recycler.setLayoutManager(linearLayoutManager2);
+//        DishesAdapter adapter2 = new DishesAdapter();
+//        dishes_recycler.setAdapter(adapter2);
 
         restaurant_recycler = view.findViewById(R.id.restaurant_recycler);
         LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
@@ -77,7 +102,12 @@ public class homeFragment extends Fragment {
         RestaurantsAdapter adapter3 = new RestaurantsAdapter();
         restaurant_recycler.setAdapter(adapter3);
     }
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
 
+    }
     private class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
         ArrayList<Integer> categories;
         Context context;
@@ -158,6 +188,7 @@ public class homeFragment extends Fragment {
         public int getItemCount() {
             return 5;
         }
+
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             public ViewHolder(@NonNull View itemView) {

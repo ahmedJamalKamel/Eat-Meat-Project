@@ -18,7 +18,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.firebase.ui.auth.AuthMethodPickerLayout;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -151,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, RequestsActivity.class));
                 break;
             case R.id.restaurant:
-                startActivity(new Intent(MainActivity.this, ResturantActivity.class));
+                startActivity(new Intent(MainActivity.this, RestaurantActivity.class));
                 break;
             case R.id.about_us:
                 startActivity(new Intent(MainActivity.this, AboutUs.class));
