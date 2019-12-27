@@ -55,7 +55,6 @@ public class HomeFragment extends Fragment {
 
         adapter = new ImprtantDishesAdapter(options);
         RecyclerView recyclerView = view.findViewById(R.id.dishes_recycler);
-        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 
@@ -69,7 +68,6 @@ public class HomeFragment extends Fragment {
 
         adapterrestorent = new ImprtantRestaurantAdapter(optionsRestorent);
         RecyclerView recyclerViewRestorent = view.findViewById(R.id.restaurant_recycler);
-        recyclerViewRestorent.setHasFixedSize(true);
         recyclerViewRestorent.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         recyclerViewRestorent.setAdapter(adapterrestorent);
 
