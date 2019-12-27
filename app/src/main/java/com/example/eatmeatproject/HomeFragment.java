@@ -22,20 +22,19 @@ import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 
-public class homeFragment extends Fragment {
+public class HomeFragment extends Fragment {
     RecyclerView category_recycler, dishes_recycler, restaurant_recycler;
-    private FirebaseFirestore db=FirebaseFirestore.getInstance();
-    private CollectionReference collectionReference=db.collection("TImportantDishes");
+    private CollectionReference collectionReference;
+    private CollectionReference collectionReferenceRestornt;
     private ImprtantDishesAdapter adapter;
+    private ImprtantRestaurantAdapter adapterrestorent;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        adapter.startListening();
-    }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        collectionReference = db.collection("TImportantDishes");
+        collectionReferenceRestornt = db.collection("TRestaurant");
     }
 
     @Nullable
@@ -48,18 +47,33 @@ public class homeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        Query query=collectionReference;
-        FirestoreRecyclerOptions<ImportantDishes> options=new FirestoreRecyclerOptions
+        Query query = collectionReference.orderBy("name");
+        FirestoreRecyclerOptions<ImportantDishes> options = new FirestoreRecyclerOptions
                 .Builder<ImportantDishes>()
-                .setQuery(query,ImportantDishes.class)
+                .setQuery(query, ImportantDishes.class)
                 .build();
-        adapter=new ImprtantDishesAdapter(options);
-        RecyclerView recyclerView=view.findViewById(R.id.dishes_recycler);
+
+        adapter = new ImprtantDishesAdapter(options);
+        RecyclerView recyclerView = view.findViewById(R.id.dishes_recycler);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 
+        ///////////////////////////
 
+        Query queryRestorent = collectionReferenceRestornt.orderBy("name");
+        FirestoreRecyclerOptions<ModelImprtantRestaurant> optionsRestorent = new FirestoreRecyclerOptions
+                .Builder<ModelImprtantRestaurant>()
+                .setQuery(queryRestorent, ModelImprtantRestaurant.class)
+                .build();
+
+        adapterrestorent = new ImprtantRestaurantAdapter(optionsRestorent);
+        RecyclerView recyclerViewRestorent = view.findViewById(R.id.restaurant_recycler);
+        recyclerViewRestorent.setHasFixedSize(true);
+        recyclerViewRestorent.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+        recyclerViewRestorent.setAdapter(adapterrestorent);
+
+        ///////////////////////////
 
         AutoScrollPagerAdapter autoScrollPagerAdapter =
                 new AutoScrollPagerAdapter(getFragmentManager());
@@ -96,18 +110,27 @@ public class homeFragment extends Fragment {
 //        DishesAdapter adapter2 = new DishesAdapter();
 //        dishes_recycler.setAdapter(adapter2);
 
-        restaurant_recycler = view.findViewById(R.id.restaurant_recycler);
-        LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
-        restaurant_recycler.setLayoutManager(linearLayoutManager3);
-        RestaurantsAdapter adapter3 = new RestaurantsAdapter();
-        restaurant_recycler.setAdapter(adapter3);
+//        restaurant_recycler = view.findViewById(R.id.restaurant_recycler);
+//        LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+//        restaurant_recycler.setLayoutManager(linearLayoutManager3);
+//        RestaurantsAdapter adapter3 = new RestaurantsAdapter();
+//        restaurant_recycler.setAdapter(adapter3);
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapterrestorent.startListening();
+        adapter.startListening();
+    }
+
     @Override
     public void onStop() {
         super.onStop();
+        adapterrestorent.stopListening();
         adapter.stopListening();
-
     }
+
     private class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
         ArrayList<Integer> categories;
         Context context;

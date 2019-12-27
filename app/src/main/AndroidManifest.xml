@@ -21,7 +21,7 @@
         <activity android:name=".RequestsActivity" />
         <activity android:name=".CallUsActivity" />
         <activity android:name=".AboutUs" />
-        <activity android:name=".homeFragment" />
+        <activity android:name=".HomeFragment" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity" >
 
