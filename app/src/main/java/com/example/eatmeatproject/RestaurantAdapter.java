@@ -1,7 +1,6 @@
 package com.example.eatmeatproject;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
-import java.util.Locale;
 
 public class RestaurantAdapter extends
         RecyclerView.Adapter<RestaurantAdapter.ViewHolder> {
@@ -43,7 +41,7 @@ public class RestaurantAdapter extends
 
 
             res_image=itemView.findViewById(R.id.imageView3);
-            res_name=itemView.findViewById(R.id.textView5);
+            res_name = itemView.findViewById(R.id.name_dishes);
             res_description=itemView.findViewById(R.id.textView6);
         }
 

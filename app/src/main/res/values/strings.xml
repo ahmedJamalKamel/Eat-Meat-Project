@@ -88,8 +88,12 @@
     <string name="facebook_application_id">2672125522864305</string>
     <string name="fb_login_protocol_scheme">fb2672125522864305</string>
     <string name="Burger_Meal">Burger Meal</string>
-    <string name="price_for_burger">price for burger</string>
     <string name="Details">Details</string>
+    <string name="as_visitor">Or login as a visitor</string>
+    <string name="price_for_burger">price for burger</string>
+    <string name="palmera">Palmera</string>
+    <string name="dera">Al-Dera</string>
+    <string name="taboon">Taboon</string>
 
 
 </resources>

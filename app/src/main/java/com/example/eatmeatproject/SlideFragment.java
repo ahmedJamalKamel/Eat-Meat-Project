@@ -17,12 +17,12 @@ public class SlideFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
     @StringRes
-    private static final int[] PAGE_TITLES =
-            new int[]{R.string.thailandi_resturant, R.string.thailandi_resturant, R.string.thailandi_resturant};
+    private int[] PAGE_TITLES =
+            new int[]{R.string.palmera, R.string.thailandi_resturant, R.string.dera, R.string.taboon};
     @StringRes
-    private static final int[] PAGE_IMAGE =
+    private int[] PAGE_IMAGE =
             new int[]{
-                    R.drawable.slider, R.drawable.slider, R.drawable.slider
+                    R.drawable.palmera_1, R.drawable.thailandi_1, R.drawable.dera_1, R.drawable.taboon_1
             };
     private SliderViewModel sliderViewModel;
 
@@ -43,6 +43,8 @@ public class SlideFragment extends Fragment {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
         sliderViewModel.setIndex(index);
+
+
     }
 
     @Override

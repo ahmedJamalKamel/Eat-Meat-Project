@@ -38,6 +38,7 @@ public class RequestsActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
+
     private class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.ViewHolder> {
         Context context;
         public RequestAdapter(Context context) {

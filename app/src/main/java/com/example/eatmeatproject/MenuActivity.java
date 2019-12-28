@@ -1,8 +1,6 @@
 package com.example.eatmeatproject;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -16,18 +14,13 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,23 +44,63 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        CollectionReference docRef = db.collection("TMenu").document("N3KFMivaAa06grq5yEYw").collection("candy");
-        Log.v("ssss",docRef.getId());
+        System.out.println("DATAAA start");
 
-        docRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("TMenu").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                System.out.println("DATAAA omplete");
+                for (DocumentSnapshot doc : task.getResult().getDocuments()) {
+                    System.out.println("DATAAA" + doc.getId() + " " + doc.getData().toString());
+                    db.collection("TMenu").document(doc.getId()).collection("candy").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            for (DocumentSnapshot doc : task.getResult().getDocuments()) {
+                                System.out.println("DATAAA" + doc.getId() + " " + doc.getData().toString());
+                            }
+                        }
+                    });
+
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        Log.v("ssss",queryDocumentSnapshots.size()+"");
-
-//                        Gson gson = new Gson();
-//                        Restaurant restaurant = gson.fromJson(gson.toJson(document.getData()),Restaurant.class);
-
-
-                    progress.setVisibility(View.INVISIBLE);
+                System.out.println("DATAAA success");
+                for (DocumentSnapshot doc : queryDocumentSnapshots.getDocuments()) {
+                    System.out.println("DATAAA" + doc.getData().toString());
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                System.out.println("DATAAA Error" + e.getMessage());
 
             }
         });
+        /*docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Log.v("ssss",documentSnapshot.toString());
+
+            }
+        });*/
+
+//        docRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//            @Override
+//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                        Log.v("ssss",queryDocumentSnapshots.size()+"");
+//
+////                        Gson gson = new Gson();
+////                        Restaurant restaurant = gson.fromJson(gson.toJson(document.getData()),Restaurant.class);
+//
+//
+//                    progress.setVisibility(View.INVISIBLE);
+//
+//            }
+//        });
 //        OnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
 //            @Override
 //            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -85,7 +118,6 @@ public class MenuActivity extends AppCompatActivity {
 //                }
 //            }
 //        });
-
 
         TabLayout tabLayout=findViewById(R.id.tabs);
         ViewPager viewPager=findViewById(R.id.view_pager_for_resturant);

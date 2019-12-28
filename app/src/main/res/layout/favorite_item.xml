@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/textView4"
+            android:id="@+id/time_dishes"
             android:layout_width="wrap_content"
             android:layout_height="15dp"
             android:layout_marginEnd="10dp"
@@ -49,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/name_dishes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -77,10 +77,10 @@
             android:paddingTop="8dp"
             android:text="@string/ConLoginOrRegister3"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintBottom_toTopOf="@+id/time_dishes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/name_dishes" />
 
         <ImageView
             android:id="@+id/imageView5"
