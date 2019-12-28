@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.eatmeatproject">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
@@ -18,19 +22,17 @@
         <activity android:name=".CallUsActivity" />
         <activity android:name=".AboutUs" />
         <activity android:name=".homeFragment" />
-        <activity android:name=".MenuActivity">
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".MainActivity" >
+
+        </activity>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".MapActivity" />
-        <activity android:name=".splash">
-
         </activity>
         <activity android:name=".Introdaction" />
 
@@ -38,9 +40,5 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
     </application>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>

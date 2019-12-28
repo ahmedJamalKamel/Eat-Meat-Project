@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new homeFragment();
+                    return new HomeFragment();
                 case 1:
                     return new notifacationFragment();
                 case 2:

@@ -24,8 +24,8 @@ import java.util.ArrayList;
 
 public class homeFragment extends Fragment {
     RecyclerView category_recycler, dishes_recycler, restaurant_recycler;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference collectionReference = db.collection("TImportantDishes");
+    private FirebaseFirestore db=FirebaseFirestore.getInstance();
+    private CollectionReference collectionReference=db.collection("TImportantDishes");
     private ImprtantDishesAdapter adapter;
 
     @Override
@@ -48,15 +48,15 @@ public class homeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        Query query = collectionReference;
-        FirestoreRecyclerOptions<ImportantDishes> options = new FirestoreRecyclerOptions
+        Query query=collectionReference;
+        FirestoreRecyclerOptions<ImportantDishes> options=new FirestoreRecyclerOptions
                 .Builder<ImportantDishes>()
-                .setQuery(query, ImportantDishes.class)
+                .setQuery(query,ImportantDishes.class)
                 .build();
-        adapter = new ImprtantDishesAdapter(options);
-        RecyclerView recyclerView = view.findViewById(R.id.dishes_recycler);
+        adapter=new ImprtantDishesAdapter(options);
+        RecyclerView recyclerView=view.findViewById(R.id.dishes_recycler);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
         recyclerView.setAdapter(adapter);
 
 
@@ -102,7 +102,6 @@ public class homeFragment extends Fragment {
         RestaurantsAdapter adapter3 = new RestaurantsAdapter();
         restaurant_recycler.setAdapter(adapter3);
     }
-
     @Override
     public void onStop() {
         super.onStop();

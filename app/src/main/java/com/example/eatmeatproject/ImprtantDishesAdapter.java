@@ -1,5 +1,6 @@
 package com.example.eatmeatproject;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,7 @@ public class ImprtantDishesAdapter extends FirestoreRecyclerAdapter<ImportantDis
         Glide.with(imageView).load(model.getimage_url()).into(imageView);
         TimeDishes.setText(model.getTime());
         NameDishes.setText(model.getName());
-
+        Log.d("ImprtantDishesAdapter", "onBindViewHolder: " + model.getName());
     }
 
     @NonNull
